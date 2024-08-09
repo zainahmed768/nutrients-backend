@@ -1,3 +1,6 @@
+<form action="{{ route('user.logout') }}" id="logout-form" method="POST" style="display: none;">
+    @csrf
+</form>
 <header id="header">
     <div class="secondary-header-wrapper">
         <div class="container">
@@ -305,64 +308,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <div class="dropdown "><a href="shop.php" class="nav-links">
-                                    </a><a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="true">Health &amp; wellness</a>
-
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <div class="row p-4">
-                                            <div class="col-lg-12">
-
-                                                <a class="dropdown-item" href="#">Immunity</a>
-                                                <a class="dropdown-item" href="#">Antioxidants</a>
-                                                <a class="dropdown-item" href="#">Women's Health</a>
-                                                <a class="dropdown-item" href="#">Men's Health</a>
-                                                <a class="dropdown-item" href="#">Children's Health</a>
-                                                <a class="dropdown-item" href="#">Heart Health</a>
-                                                <a class="dropdown-item" href="#">Sexual Health</a><a
-                                                    class="dropdown-item" href="#">Sleep &amp; Relaxation</a><a
-                                                    class="dropdown-item" href="#">Stress &amp; Anxiety</a><a
-                                                    class="dropdown-item" href="#">Digestive Health</a><a
-                                                    class="dropdown-item" href="#">Brain &amp; Memory</a><a
-                                                    class="dropdown-item" href="#">Joint Support</a><a
-                                                    class="dropdown-item" href="#">Blood Sugar Support</a>
-                                            </div>
-
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <div class="dropdown "><a href="shop.php" class="nav-links">
-                                    </a><a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="true">Herbs & Natural Remedies</a>
-
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <div class="row p-4">
-                                            <div class="col-lg-12">
-
-                                                <a class="dropdown-item" href="#">Ashwagandha</a>
-                                                <a class="dropdown-item" href="#">Ginseng</a>
-                                                <a class="dropdown-item" href="#">Maca</a>
-                                                <a class="dropdown-item" href="#">Turmeric</a>
-                                                <a class="dropdown-item" href="#">Herbal Teas</a>
-                                                <a class="dropdown-item" href="#">Saw Palmetto</a>
-                                                <a class="dropdown-item" href="#">Ginkgo Biloba</a>
-                                            </div>
-
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </li>
+                            <li class="nav-item"><a href="{{ route('blog') }}" class="nav-links">Blogs</a></li>
                             <!-- <li class="nav-item"><a href="shop.php" class="nav-links">Health & wellness</a></li> -->
                             <!-- <li class="nav-item"><a href="shop.php" class="nav-links">Herbs & Natural Remedies</a></li> -->
                             <li class="nav-item"><a href="shop.php" class="nav-links">Special Offers</a></li>
@@ -383,9 +329,18 @@
                                     <span class="total-cart-no">1</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="contact.php" class="btn">Get A Quote</a>
-                            </li>
+                            @if (Auth::check())
+                                <li>
+                                    <button type="submit"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                        class="btn">Logout</button>
+                                </li>
+                            @else
+                                <li>
+                                    <a href="contact.php" class="btn">Get A Quote</a>
+                                </li>
+                            @endif
+
                         </ul>
                     </div>
                 </div>

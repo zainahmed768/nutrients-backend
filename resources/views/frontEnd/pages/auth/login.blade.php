@@ -65,15 +65,17 @@
                         <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore.</p>
                         <hr>
-                        <form method="" action="profile.php">
+                        <form method="POST" action="{{ route('user.authenticate') }}">
+                            @csrf
                             <div class="row mt-4">
                                 <div class="col-md-12 mt-4">
                                     <label for="">Email Address</label>
-                                    <input type="text" class="form-control" placeholder="johndoe@gmail.com">
+                                    <input type="email" name="email" value="{{ old('email') }}" class="form-control"
+                                        placeholder="johndoe@gmail.com">
                                 </div>
                                 <div class="col-md-12 mt-4">
                                     <label for="">Password</label>
-                                    <input type="password" class="form-control" placeholder="12345678">
+                                    <input type="password" name="password" class="form-control" placeholder="12345678">
                                 </div>
                                 <div class="col-md-6 mt-2">
                                     <input type="checkbox">
@@ -83,7 +85,7 @@
                                     <a class="forgot-password" href="forgot-password.php">Forget Password</a>
                                 </div>
                                 <div class="col-md-12 mt-5">
-                                    <button class="btn w-100">Sign in</button>
+                                    <button type="submit" class="btn w-100">Sign in</button>
                                 </div>
                             </div>
                         </form>

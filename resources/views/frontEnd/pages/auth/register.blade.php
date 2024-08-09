@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="auth-btn text-right">
-                        <a href="signin.php" class="btn light-btn">Sign in</a>
+                        <a href="{{ route('user.login') }}" class="btn light-btn">Sign in</a>
                         <a href="javascript:void(0);" class="btn">Sign up</a>
                     </div>
                     <div class="signup-form">
@@ -64,7 +64,7 @@
                         <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore.</p>
                         <hr>
-                        <form method="POST" action="{{ route('user.create') }}">
+                        <form action="{{ route('user.create') }}" method="POST">
                             @csrf
                             <div class="row mt-4">
                                 <div class="col">
@@ -78,7 +78,7 @@
                                 <div class="col">
                                     <label for="">Last Name</label>
                                     <input type="text" value="{{ old('last_name') }}" name="last_name"
-                                        class="form-control @error('first_name') is-invalid @enderror">
+                                        class="form-control @error('last_name') is-invalid @enderror">
                                     @error('last_name')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
@@ -86,7 +86,7 @@
                                 <div class="col-md-12 mt-4">
                                     <label for="">Email Address</label>
                                     <input type="email" value="{{ old('email') }}" name="email"
-                                        class="form-control @error('first_name') is-invalid @enderror">
+                                        class="form-control @error('email') is-invalid @enderror">
                                     @error('email')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
@@ -94,14 +94,14 @@
                                 <div class="col-md-12 mt-4">
                                     <label for="">Phone Number</label>
                                     <input type="number" value="{{ old('phone') }}" name="phone"
-                                        class="form-control @error('first_name') is-invalid @enderror">
+                                        class="form-control @error('phone') is-invalid @enderror">
                                     @error('phone')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
                                 <div class="col mt-4">
                                     <label for="">Password</label>
-                                    <input type="password"  name="password"
+                                    <input type="password" name="password"
                                         class="form-control @error('password') is-invalid @enderror">
                                     @error('password')
                                         <p class="text-danger">{{ $message }}</p>
@@ -110,7 +110,8 @@
                                 <div class="col mt-4">
                                     <label for="">Confirm Password</label>
                                     <input type="password" name="password_confirmation"
-                                        class="form-control @error('password_confirmation') is-invalid @enderror" id="password_confirmation">
+                                        class="form-control @error('password_confirmation') is-invalid @enderror"
+                                        id="password_confirmation">
                                     @error('password_confirmation')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
@@ -120,6 +121,7 @@
                                 </div>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>

@@ -24,24 +24,47 @@ class UserController extends Controller
 
     public function create(CreateUserRequest $request)
     {
-        dd($request->all());
-        // Get the validated data
+        // dd($request->all());
         $validatedData = $request->validated();
 
-        // Create the user
-        $user = User::create([
-            'first_name' => $validatedData['first_name'],
-            'last_name'  => $validatedData['last_name'],
-            'email'      => $validatedData['email'],
-            'phone'      => $validatedData['phone'],
-            'password'   => Hash::make($validatedData['password']), // Hash the password
-            'role'       => "user", // Set role explicitly
+        $user = new User();
+        $user->first_name = $validatedData['first_name'];
+        $user->last_name = $validatedData['last_name'];
+        $user->email = $validatedData['email'];
+        $user->phone = $validatedData['phone'];
+        $user->password = Hash::make($validatedData['password']);
+        $user->role = "user";
+        $user->save();
+
+        return redirect()->route('user.login')->with('success', 'User created successfully');
+    }
+
+    public function authenticate(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string|min:6',
         ]);
 
-        // Debugging output (Remove this in production)
-        dd($user);
+        $credentials = $request->only('email', 'password');
 
-        // Redirect to the login page with a success message
-        return redirect()->route('user.login')->with('success', 'User created successfully');
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->route('home')->with('success', 'Login successfully');
+        }
+
+        return redirect()->back()
+            ->withInput($request->only('email'))
+            ->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('user.login')->with('success', 'Logout successfully');
     }
 }

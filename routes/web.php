@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\BackendController\AdminController;
+use App\Http\Controllers\BackendController\BlogController;
 use App\Http\Controllers\BackendController\UserController;
+use App\Http\Controllers\FrontendController\BlogController as FrontendControllerBlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,18 +19,27 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('frontEnd.pages.home');
-});
+})->name('home');
 
-Route::get('/blog', function () {
-    return view('frontEnd.pages.blogs.blog');
-});
+Route::get('/blog', [FrontendControllerBlogController::class, 'index'])->name('blog');
 
-Route::get('/blog-detail', function () {
-    return view('frontEnd.pages.blogs.blog-detail');
-})->name('blog-detail');
+Route::get('/blog-detail/{id}', [FrontendControllerBlogController::class, 'show'])->name('blog-detail');
 
-Route::get('/login', [UserController::class, 'login'])->name('user.login');
+Route::get('/login', [UserController::class, 'index'])->name('user.login');
 
 Route::get('/register', [UserController::class, 'register'])->name('user.register');
 
-Route::post('/user/create', [UserController::class, 'create'])->name('user.create');
+Route::post('/register/create', [UserController::class, 'create'])->name('user.create');
+
+Route::post('/login/authenticate', [UserController::class, 'authenticate'])->name('user.authenticate');
+
+Route::post('/logout', [UserController::class, 'logout'])->name('user.logout');
+
+Route::get('/dashboard', function () {
+    return view('backEnd.pages.dashboard');
+});
+
+Route::group(['middleware' => ['auth', 'admin']], function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
+    Route::resource('/admin/blogs', BlogController::class);
+});
