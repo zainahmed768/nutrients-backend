@@ -1,0 +1,89 @@
+/* Blog Css Start Here */
+.blog_sec {
+  padding: 60px 0px;
+}
+.blog_box {
+  margin-bottom: 30px;
+}
+.blog_box .picture_box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+.blog_box .picture_box .hover_dv {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: #1aac7a6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  transform: rotate(360deg);
+  transition: 0.7s;
+}
+.blog_box:hover .picture_box .hover_dv {
+  height: 90%;
+  width: 90%;
+  transform: rotate(0deg);
+}
+.blog_box .img_box img {
+  height: 320px;
+  width: 100%;
+  object-fit: cover;
+}
+.blog_box .img_box figure {
+  margin: 0;
+}
+.blog_box .content_box {
+  box-shadow: 0px 5px 6px #ddd;
+  padding: 20px 20px;
+}
+.blog_box .content_box h5 {
+  margin: 0;
+  font-family: "Poppins";
+  color: #1aac7a;
+  font-size: 14px;
+  font-weight: 500;
+}
+.blog_box .content_box h4 {
+  font-size: 20px;
+  color: #274d5e;
+  line-height: 27px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.blog_box .content_box p {
+  font-size: 14px;
+  color: #274d5e;
+  font-family: "GT Walsheim Pro Regular";
+  filter: contrast(0.5);
+}
+.blog_box .content_box .button-group a {
+  font-size: 16px;
+  color: #274d5e;
+  font-family: "GT Walsheim Pro Regular";
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.blog_box .content_box .button-group span.icon {
+  background: #1aac7a;
+  color: #fff;
+  font-size: 14px;
+  width: 30px;
+  display: block;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 2px solid #35b88b;
+  border-radius: 3px;
+  margin-left: 10px;
+  box-shadow: 0px 4px 10px #1aac7a;
+}
+/* Blog Css End Here */

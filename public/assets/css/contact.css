@@ -1,0 +1,107 @@
+/* Map Css Start here */
+.map_sec {
+  padding: 60px 0;
+}
+.map_sec .google_map iframe {
+  border-radius: 10px;
+}
+/* Map Css Start here */
+
+/* Contact Sec Css Start Here */
+.contact_sec {
+  padding: 0 0 60px;
+}
+.contact_sec .title h3 {
+  font-size: 30px;
+  color: #000000;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.contact_sec .info_box {
+  background: #fff;
+  border: 1px solid #d4d4d4;
+  padding: 20px 25px;
+  box-shadow: 0px 0px 15px #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+.contact_sec .info_box .topbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contact_sec .info_box .topbar .iconDv {
+  background: #1aac7a;
+  color: #fff;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 10px;
+}
+.contact_sec .info_box .topbar h4 {
+  margin: 0;
+  color: #1aac7a;
+  font-size: 22px;
+  font-weight: 500;
+}
+.contact_sec .info_box ul.info {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.contact_sec .info_box ul.info li span {
+  text-transform: uppercase;
+  color: #505050;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+}
+.contact_sec .info_box ul.info li a {
+  font-size: 14px;
+  color: #717171;
+  font-family: "Poppins";
+  font-weight: 500;
+  text-decoration: none;
+}
+.contact_sec .info_box ul.info li {
+  font-size: 14px;
+  color: #717171;
+  font-family: "Poppins";
+  font-weight: 500;
+  text-decoration: none;
+  margin: 5px 0;
+}
+.contact_sec form {
+  padding-top: 80px;
+}
+.contact_sec form .form-group {
+  margin-bottom: 28px;
+}
+.contact_sec form .form-group .form-control {
+  border-radius: 0;
+  border: 1px solid #d4d4d4;
+  padding: 12px 20px;
+  font-family: "Poppins";
+  font-size: 14px;
+  color: #717171;
+}
+.contact_sec form .form-group .form-control::placeholder {
+  color: #717171;
+  font-weight: 500;
+}
+.contact_sec form .form-group textarea {
+  height: 150px !important;
+  resize: none;
+}
+.contact_sec form .button-group {
+  text-align: end;
+}
+.contact_sec form .button-group button.btn {
+  padding: 10px 60px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* Contact Sec Css End Here */

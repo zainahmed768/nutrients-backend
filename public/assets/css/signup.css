@@ -1,0 +1,36 @@
+.register-user {
+    padding: 80px 0px;
+}
+.text-on-img {
+    position: absolute;
+    bottom: 0px;
+    padding: 2% 5% 2% 5%;
+}
+.social-icons ul li{
+    list-style: none;
+    display: flex;
+    text-align: center;
+}
+.social-icons ul {
+    padding: 0%;
+}
+.twitter, .facebook, .google {
+    padding: 5%;
+}
+.border1 {
+    width: 20%;
+    margin-right: 5%;
+}
+.border2 {
+    width: 20%;
+    margin-left: 5%;
+}
+.light-btn {
+    background: #DEDEDE;
+}
+.signup-form {
+    padding: 12% 2% 0% 2%;
+}
+.btn {
+    color: #fff !important;
+}

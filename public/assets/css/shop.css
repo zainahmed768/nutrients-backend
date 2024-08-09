@@ -1,0 +1,313 @@
+.shop {
+  padding: 100px 0px;
+}
+.search-wrapper .form-control {
+  border: 0px;
+  font-family: "GT Walsheim Pro regular";
+  color: #50625c;
+  font-weight: 500;
+}
+.shop .search-wrapper button {
+  border: 0px;
+  background: no-repeat;
+  border-radius: 0px;
+}
+.shop .search-wrapper {
+  padding: 0px 10px;
+  background: #fff;
+  box-shadow: -2px 2px 5px 2px #ececec;
+}
+.shop .search-and-select select {
+  background: #fff;
+  box-shadow: -2px 2px 5px 2px #ececec;
+  border: 0px;
+  height: 50px !important;
+}
+.shop .sidebar-content-wrapper .card h5 button:focus {
+  outline: none !important;
+}
+.shop .sidebar-heading-wrapper h4 {
+  color: #005739;
+  font-size: 20px;
+  font-weight: 400;
+}
+.shop .sidebar-heading-wrapper {
+  padding: 20px;
+  border-left: 2px solid #005739;
+  border-bottom: 2px solid #b1cbc2;
+}
+.shop .sidebar-content-wrapper .card {
+  background: transparent;
+  border: 0px;
+}
+.shop .sidebar-content-wrapper .card h5 button {
+  color: #50625c !important;
+  font-size: 15px;
+  font-family: "GT Walsheim Pro Regular";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.shop .card-header {
+  background: transparent;
+  border-bottom: 0px;
+  padding: 0.7rem 1rem;
+}
+.shop .sidebar-content-wrapper {
+  background: #fff;
+  box-shadow: 0px 2px 5px 2px #ececec;
+  padding: 1rem 0;
+}
+.sidebar-content-wrapper .card-body {
+  padding: 20px;
+  color: #50625c !important;
+  font-size: 13px;
+  font-family: "GT Walsheim Pro Regular";
+  padding-left: 40px;
+}
+.sidebar-card-wrapper {
+  margin-bottom: 25px;
+}
+/* range slider */
+[slider] {
+  position: relative;
+  height: 14px;
+  border-radius: 10px;
+  text-align: left;
+  margin: 10px 0 10px 0;
+}
+[slider] > div {
+  position: absolute;
+  left: 13px;
+  right: 15px;
+  height: 14px;
+}
+
+[slider] > div > [inverse-left] {
+  position: absolute;
+  left: 0;
+  height: 7px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin: 0 7px;
+  border: 1px solid #cfd4dd;
+}
+
+[slider] > div > [inverse-right] {
+  position: absolute;
+  right: 0;
+  height: 7px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin: 0 7px;
+  border: 1px solid #cfd4dd;
+}
+
+[slider] > div > [range] {
+  position: absolute;
+  left: 0;
+  height: 7px;
+  border-radius: 14px;
+  background-color: #1aac7a;
+}
+
+[slider] > div > [thumb] {
+  position: absolute;
+  top: -5px;
+  z-index: 2;
+  height: 16px;
+  width: 16px;
+  text-align: left;
+  margin-left: -8px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 40%);
+  background-color: #ffffff;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #dddddd;
+}
+
+[slider] > input[type="range"] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+  height: 14px;
+  top: -2px;
+  width: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+div[slider] > input[type="range"]::-ms-track {
+  -webkit-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type="range"]::-moz-range-track {
+  -moz-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+  border: transparent;
+}
+
+div[slider] > input[type="range"]:focus {
+  outline: none;
+}
+
+div[slider] > input[type="range"]::-ms-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: #ff0000;
+}
+
+div[slider] > input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: #ff0000;
+}
+
+div[slider] > input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: #c0247d;
+  -webkit-appearance: none;
+}
+
+div[slider] > input[type="range"]::-ms-fill-lower {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type="range"]::-ms-fill-upper {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+[slider] > div > [sign] {
+  opacity: 1;
+  position: absolute;
+  margin-left: -57px;
+  top: -39px;
+  z-index: 3;
+  background-color: #fff;
+  color: #000;
+  width: 106px;
+  height: 33px;
+  border-radius: 28px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 28px;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*
+  [slider] > div > [sign]:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    border-radius: 16px;
+    top: 19px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top-width: 16px;
+    border-top-style: solid;
+    border-top-color: #ff0000;
+  }
+  */
+
+[slider] > div > [sign] > span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+[slider]:hover > div > [sign] {
+  opacity: 1;
+}
+.sidebar-card-wrapper .rangeSlideDv {
+  padding: 20px;
+}
+.rangeSlideDv span.label {
+  color: #1aac7a;
+  font-family: "GT Walsheim Pro regular";
+  font-size: 16px;
+  font-weight: 700;
+}
+.rangeSlideDv span {
+  font-family: "Poppins";
+  font-size: 13px;
+  color: #363636;
+  font-weight: 500;
+}
+/* ranger slider */
+
+.sidebar-content-wrapper .form-check-input {
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 3px;
+}
+.sidebar-content-wrapper ul.d-flex {
+  padding: 0px;
+  list-style: none;
+}
+.sidebar-content-wrapper .form-check-input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.sidebar-content-wrapper .form-check-input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #1aac7a;
+  visibility: visible;
+  border-radius: 50%;
+}
+.shop .rating-wrappers {
+  padding: 20px;
+}
+.shop .rating-wrappers i {
+  margin: 0px 2px;
+}
+.shop ul.pagination button.pagination-btn {
+  margin: 0px 5px;
+  color: #0a3325;
+  font-family: "GT Walsheim Pro Regular";
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 0px !important;
+  border: 0px;
+  padding: 9px 12px;
+}
+.shop ul.pagination button.pagination-btn i{
+  font-size: 15px;
+}
+.shop ul.pagination button.pagination-btn.active{
+  background-color: #1AAC7A;
+  color: #fff;
+}

@@ -1,0 +1,420 @@
+.product-details {
+  padding: 80px 0px;
+}
+.review-wrapper ul {
+  padding: 0px;
+  display: flex;
+  list-style: none;
+}
+.review-wrapper ul li i {
+  color: #ebbc00;
+  margin: 0px 5px 0px 0px;
+  font-size: 13px;
+}
+.review-wrapper ul li span {
+  color: #67828e;
+  font-family: "GT Walsheim Pro Regular";
+  font-size: 14px;
+  margin-left: 12px;
+}
+.product-name-wrapper h4 {
+  color: #005739;
+  font-weight: bold;
+  font-family: 'gtwb';
+  font-size: 22px;
+}
+.availability-wrapper span {
+  font-family: "GT Walsheim Pro regular";
+  font-weight: 500;
+  color: #50625c;
+  font-size: 14px;
+}
+.availability-wrapper span.InStock {
+  color: #3cb88e;
+}
+.product-spec-list-wrapper li {
+  font-size: 14px;
+}
+.product-des-wrapper p {
+  color: #67828e;
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+.product-des-wrapper {
+  margin-top: 20px;
+}
+.product-spec-list-wrapper ul {
+  display: flex;
+  padding: 0px;
+  justify-content: space-between;
+  margin-left: 21px;
+  font-family: "GT Walsheim Pro regular";
+  color: #50625c;
+}
+.product-spec-list-wrapper ul li::marker {
+  color: #1aac7a;
+  font-size: 23px;
+  line-height: 0px;
+}
+.product-details .counter-and-price-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+.counter-and-price-wrapper span.sales-price {
+  color: #1aac7a;
+}
+.counter-and-price-wrapper strike.regular-price {
+  color: #8398a1;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 0px;
+}
+.number input[type="text"] {
+  width: 58px;
+  text-align: center;
+  border: 0px;
+  color: #1aac7a;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "GT Walsheim Pro regular";
+}
+.number span {
+  width: 38px;
+  height: 31px;
+  background: #1aac7a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  color: #fff;
+  border: 2px solid #35b88b;
+}
+.number {
+  display: flex;
+  align-items: center;
+}
+.product-details .button-wrapper button {
+  margin: 10px 0px;
+  border-radius: 4px;
+  padding: 14px 0px;
+  font-family: "GT Walsheim Pro regular";
+  transition: all 0.4s ease-in-out;
+}
+.product-details .button-wrapper button.cart-btn.form-control {
+  background: #1aac7a;
+  color: #fff;
+  border: 2px solid transparent;
+}
+.product-details .button-wrapper button i {
+  margin-right: 19px;
+}
+.product-details .button-wrapper button.cart-btn:hover {
+  outline: 2px solid #1aac7a;
+}
+.button-wrapper button.wishlist-wrapper {
+  background: #dedede;
+  color: #274d5e;
+  font-family: "GT Walsheim Pro regular";
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+.other-spec-wrapper ul {
+  padding: 0px;
+  list-style: none;
+}
+.other-spec-wrapper ul li {
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "GT Walsheim Pro black";
+  font-size: 15px;
+  font-weight: 500;
+}
+.other-spec-wrapper {
+  width: 300px;
+}
+.other-spec-wrapper ul li span.value {
+  color: #1aac7a;
+}
+.other-spec-wrapper ul li span.property {
+  color: #324740;
+}
+.product-detail-img-wrapper figure::after {
+  content: "";
+  width: 100%;
+  height: 98%;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 13%;
+  z-index: -1;
+  box-shadow: 0px 1px 5px 1px rgb(0 0 0 / 10%);
+  /* box-shadow: 1px 6px 10px -1px #cacacaa8; */
+}
+
+.product-detail-img-wrapper figure {
+  position: relative;
+}
+.Related h2 {
+  color: #005739;
+  font-weight: bold;
+}
+.detail-tabs-wrapper .nav-link.active {
+  border: 0px;
+  background: #1aac7a;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "GT Walsheim Pro black";
+  padding: 10px 37px;
+  box-shadow: 3px 3px 10px 1px #00000024;
+}
+.detail-tabs-wrapper {
+  margin-top: 33px;
+}
+.detail-tabs-wrapper .nav-link {
+  border: 0px;
+  background: #ffffff;
+  border-radius: 5px;
+  color: #005739;
+  font-family: "GT Walsheim Pro black";
+  padding: 10px 37px;
+  margin: 0px 10px 0px 0px;
+  box-shadow: 3px 3px 10px 1px #00000024;
+}
+
+.detail-tabs-wrapper .nav-tabs {
+  border: 0px;
+}
+.product-details .des-content-wrapper {
+  padding: 30px 0px;
+}
+.product-details .des-content-wrapper h4 {
+  color: #232323;
+  font-family: "GT Walsheim Pro black";
+  font-size: 24px;
+}
+
+.product-details .des-content-wrapper p {
+  color: #b5c9ba;
+  font-size: 14px;
+  font-family: "GT Walsheim Pro black";
+}
+
+.des-content-wrapper .card-header {
+  background: transparent;
+  border: 0px;
+  padding: 10px 0px;
+}
+
+.des-content-wrapper .card {
+  border: 0px;
+}
+
+.des-content-wrapper .card-header button {
+  color: #5d7068;
+  font-family: "GT Walsheim Pro black";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0px;
+  text-decoration: none;
+}
+.des-content-wrapper .card-body {
+  color: #b5c9ba;
+  font-size: 14px;
+  font-family: "GT Walsheim Pro black";
+}
+.user-content-wrapper .date-and-starts-wrapper {
+  align-items: center;
+}
+.product-details .blog-replies-wrapper {
+  padding: 40px 0px;
+}
+.product-details .blog-replies-wrapper p {
+  color: #b5c9ba;
+  font-family: "GT Walsheim Pro black";
+  font-size: 14px;
+}
+.product-details .blog-replies-wrapper h4 {
+  color: #232323;
+  font-family: "GT Walsheim Pro black";
+  font-size: 24px;
+}
+.rating-wrapper ul {
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  margin-left: 29px;
+}
+.rating-wrapper ul li i {
+  margin: 0px 2px;
+  color: #febf00;
+  font-size: 13px;
+}
+.product-details h5.replied-user-name {
+  color: #0c0202;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "GT Walsheim Pro regular";
+}
+.product-details .comment-date {
+  color: #818181;
+  font-family: "GT Walsheim Pro regular";
+  font-size: 14px;
+  font-weight: 400;
+}
+.blog-replies-wrapper p.comment-content {
+  color: #5e5e5e;
+  font-family: "GT Walsheim Pro regular";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/****** Style Star Rating Widget *****/
+.rating {
+  border: none;
+  float: left;
+  position: absolute;
+  top: 0px;
+  right: 8%;
+}
+
+.rating > input {
+  display: none;
+}
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+  .rating:not(:checked) > label:hover, /* hover current star */
+  .rating:not(:checked) > label:hover ~ label {
+  color: #ffd700;
+} /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+  .rating > input:checked ~ label:hover,
+  .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+  .rating > input:checked ~ label:hover ~ label {
+  color: #ffed85;
+}
+
+.rev-wrapper {
+  margin: 30px 0px;
+}
+.rev-wrapper input {
+  border: 1px solid #c7c1c1;
+  border-radius: 0px;
+  padding: 11px;
+  font-family: "GT Walsheim Pro regular";
+  font-size: 13px;
+}
+.rev-wrapper input::placeholder {
+  color: #b5c9ba;
+}
+.rev-wrapper textarea {
+  border: 1px solid #c7c1c1;
+  border-radius: 0px;
+  padding: 11px;
+  font-family: "GT Walsheim Pro regular";
+  font-size: 13px;
+}
+.rev-wrapper textarea::placeholder {
+  color: #b5c9ba;
+}
+.rev-wrapper .form-check-input {
+  margin-top: 7px;
+  margin-left: -3px;
+}
+.rev-wrapper label.form-check-label {
+  color: #000000;
+  font-family: "GT Walsheim Pro regular";
+  font-size: 14px;
+}
+
+.product-img-slider-wrapper {
+  margin: 30px 0px;
+}
+.product-img-slider-wrapper .slick-slide img {
+  display: block;
+  margin: 0px auto;
+  height: 76px;
+  width: 76px;
+  object-fit: cover;
+}
+.product-img-slider-wrapper .slick-list {
+  width: 400px;
+  margin: 0 auto;
+}
+section.product-details .product-detail-img-wrapper {
+  margin-top: -60px;
+  margin-bottom: 80px;
+}
+.product-img-slider-wrapper .img-wrapper::after {
+  content: "";
+  width: 74%;
+  height: 60%;
+  position: absolute;
+  background: white;
+  display: block;
+  top: 17px;
+  left: 14%;
+  right: 0px;
+  z-index: -1;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  /* box-shadow: 3px 3px 10px 1px #00000024; */
+}
+.product-img-slider-wrapper .img-wrapper.slick-slide{
+  height: 108px;
+} 
+.product-img-slider-wrapper .img-wrapper {
+  position: relative;
+}
+.product-img-slider-wrapper .img-wrapper.slick-current::after {
+  content: "";
+  background: #1aac7a;
+}
+.product-img-slider-wrapper .slick-prev {
+  /* left: -52px; */
+  left: 0;
+}
+.product-img-slider-wrapper button.slick-arrow {
+  background: #1aac7a;
+  width: 44px;
+  height: 44px;
+}
+.product-img-slider-wrapper .slick-next {
+  /* right: -51px; */
+  right: 0;
+}
+.product-img-slider-wrapper .slick-prev:before {
+  content: "\f104";
+  font-family: "FontAwesome";
+}
+.product-img-slider-wrapper .slick-next:before {
+  content: "\f105";
+  font-family: "FontAwesome";
+}

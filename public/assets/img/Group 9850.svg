@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="69" viewBox="0 0 71 69">
+  <defs>
+    <filter id="Rectangle_4600" x="0" y="0" width="71" height="69" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_9850" data-name="Group 9850" transform="translate(-658 -1751)">
+    <g transform="matrix(1, 0, 0, 1, 658, 1751)" filter="url(#Rectangle_4600)">
+      <g id="Rectangle_4600-2" data-name="Rectangle 4600" transform="translate(9 6)" fill="#1aac7a" stroke="#39ac85" stroke-width="1">
+        <rect width="53" height="51" rx="5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="52" height="50" rx="4.5" fill="none"/>
+      </g>
+    </g>
+    <g id="phone-call" transform="translate(681.461 1771)">
+      <g id="Group_4168" data-name="Group 4168" transform="translate(0.539 0)">
+        <path id="Path_8702" data-name="Path 8702" d="M22.4,16.507l-3.139-3.139a2.088,2.088,0,0,0-3.475.785A2.136,2.136,0,0,1,13.315,15.5c-2.242-.561-5.269-3.475-5.829-5.829A2.032,2.032,0,0,1,8.831,7.2a2.088,2.088,0,0,0,.785-3.475L6.477.589a2.239,2.239,0,0,0-3.027,0L1.32,2.718C-.81,4.96,1.545,10.9,6.813,16.171s11.21,7.735,13.452,5.493l2.13-2.13A2.239,2.239,0,0,0,22.4,16.507Z" transform="translate(-0.539 0)" fill="#fcfcfc"/>
+      </g>
+    </g>
+  </g>
+</svg>

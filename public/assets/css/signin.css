@@ -1,0 +1,18 @@
+.forgot-password {
+    color: #1aac7a;
+    text-decoration: underline;
+}
+.btn {
+    color: #fff !important;
+}
+.forgot-icon {
+    position: absolute;
+    right: 25px;
+    top: 42px;
+}
+.otp-section input {
+    text-align: center;
+    border: 1px solid #DEDEDE;
+    width: 100%;
+    padding: 20% 40% 20% 40%;
+}

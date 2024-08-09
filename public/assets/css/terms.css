@@ -1,0 +1,30 @@
+/* Terms Services Css Start Here */
+.terms {
+  padding: 60px 0;
+}
+.terms .heading h4 {
+  color: #1aac7a;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+.terms .content_wrapper {
+  padding-bottom: 20px;
+}
+.terms .content_wrapper h3.title {
+  color: #274d5e;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.terms .content_wrapper p {
+  font-family: "Poppins";
+  font-size: 14px;
+  color: #28463be8;
+  font-weight: 500;
+}
+.terms .content_wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* Terms Services Css End Here */

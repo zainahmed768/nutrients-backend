@@ -1,0 +1,426 @@
+/* news detailed section css starts here */
+.detailed {
+  padding-bottom: 60px;
+}
+.detailed h4 {
+  color: #a47d3f;
+  font-size: 20px;
+  font-weight: 500;
+}
+.blog-deatiled-img-wrapper {
+  position: relative;
+}
+.blog-date {
+  position: relative;
+}
+.detailed ul li {
+  color: #274d5e;
+  font-family: "GT Walsheim Pro Regular";
+  line-height: 40px;
+}
+.detailed ul li::marker {
+  color: #1aac7a;
+}
+.blog-date h3 {
+  display: inline-block;
+  width: 64px;
+  background: #2b6396;
+  padding: 9px 0px;
+  color: #fff;
+  height: 65px;
+  font-size: 20px;
+  border-radius: 0px 0px 11px 0px;
+  position: absolute;
+  right: 2%;
+  margin-top: -88px;
+  text-align: center;
+}
+.blog-date span {
+  font-weight: 500;
+}
+
+/* news detailed section css ends here */
+/* QUOTE form css starts here */
+
+.quote {
+  /* padding: 60px 0; */
+  /* padding-bottom: 100px; */
+  padding: 0px 0 30px 0;
+}
+/* .quote form{
+    display: none;
+  } */
+.quote h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 23px;
+  margin-bottom: 1rem;
+}
+/* .quote form {
+  display: none !important;
+} */
+.quote button.reply {
+  font-family: "Ubuntu";
+  color: #717171;
+  font-weight: 500;
+  margin: 0px;
+  background: transparent;
+  border: none;
+  padding: 0px;
+}
+.quote input {
+  padding: 13px;
+  border-radius: 0px;
+  font-family: "GT Walsheim Pro black";
+  color: #8a8a8a;
+}
+.quote label {
+  color: #272727;
+  font-family: "GT Walsheim Pro regular";
+}
+.quote textarea {
+  padding: 13px;
+  border-radius: 0px;
+  font-family: "GT Walsheim Pro black";
+  color: #8a8a8a;
+}
+.quote button.btn {
+  border-radius: 4px;
+  background: #1aac7a;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 16px;
+}
+.blo-date-and-authar-wrapper ul li {
+  line-height: 0px;
+  margin: 10px 0px;
+}
+.quote .form-check-input {
+  position: absolute;
+  margin-top: 6px !important;
+  margin-left: 0px !important;
+}
+.quote button.btn:hover {
+  outline: 2px solid #a47d3f;
+}
+.blog-left img {
+  position: absolute;
+  right: -7%;
+  bottom: 0%;
+}
+.blog-left {
+  position: relative;
+}
+.social-media-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 11;
+  margin-left: 20px;
+}
+.social-media-wrapper h5 {
+  margin-right: 20px;
+}
+.social-media-wrapper ul#social {
+  padding: 0px;
+  list-style: none;
+  display: flex;
+}
+.social-media-wrapper ul#social li {
+  margin: 0px 10px;
+}
+.social-media-wrapper ul#social li:first-child {
+  margin-left: 0px;
+}
+.blog-title h3 {
+  color: #2d323d;
+  text-transform: uppercase;
+  font-size: 28px;
+  padding: 20px 0px;
+}
+.social-media-wrapper ul#social li a {
+  height: 55px;
+  width: 55px;
+  display: block;
+  text-align: center;
+  line-height: 2.3;
+  border-radius: 50%;
+  border: 1px solid #002b4b;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    #002748,
+    #042f53,
+    #08375e,
+    #0e3f69,
+    #134875
+  );
+  font-size: 23px;
+  transition: all 0.3s ease-in-out;
+}
+.social-media-wrapper ul#social li a:hover {
+  -webkit-text-fill-color: #fff;
+  background: #08365d;
+}
+.blog-admin-and-social {
+  display: flex;
+}
+
+.admin-wrapper {
+  display: flex;
+  flex: 2;
+  align-items: center;
+}
+.admin-wrapper h5 {
+  font-size: 18px;
+  font-family: "Ubuntu";
+  color: #242424;
+  font-weight: 500;
+  margin-left: 20px;
+  width: 87%;
+  border-right: 1px solid #242424;
+}
+.social-media-wrapper h5 {
+  font-family: "Ubuntu";
+  color: #242424;
+  font-size: 18px;
+  font-weight: 500;
+}
+.admin-wrapper img {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+}
+.blog-description p {
+  color: #454545;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "GT Walsheim Pro regular";
+}
+.more-des-wrapper p {
+  color: #617d89;
+  font-family: "GT Walsheim Pro regular";
+}
+.detailed .user-content-wrapper {
+  padding-bottom: 20px;
+  margin-bottom: 21px;
+  /* margin-top: 30px; */
+  border-bottom: 1px solid #B5C9BA;
+}
+.detailed h3 {
+  color: #274d5e;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-family: "GT Walsheim Pro black";
+}
+.more-des-wrapper p.kil {
+  color: #151515;
+}
+.user-content-wrapper p.comment-content {
+  color: #454545;
+  font-weight: 500;
+  font-family: "GT Walsheim Pro regular";
+}
+.detailed h6.comment-date {
+  color: #818181;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "GT Walsheim Pro regular";
+}
+.detailed h5.replied-user-name {
+  /* font-family: "Ubuntu"; */
+  font-weight: 600;
+  color: #274d5e;
+  font-size: 16px;
+}
+a.comment-reply {
+  color: #274d5e;
+  font-weight: 600;
+  font-family: "GT Walsheim Pro Regular";
+  /* font-family: "Ubuntu"; */
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+a.comment-reply:hover {
+  color: #a47d3f;
+}
+.blog-replies-wrapper h3 {
+  text-transform: uppercase;
+  font-size: 23px;
+  color: #274d5e;
+  font-weight: bold;
+  font-family: 'gtwm';
+}
+.quotation-wrapper {
+  display: flex;
+  align-items: center;
+  background: #1aac7a;
+  border: 1px solid #b1b1b1;
+  border-radius: 7px;
+  margin: 40px 0px;
+  position: relative;
+  padding: 50px 0px;
+}
+.quotation-wrapper::before {
+  content: "";
+  display: block;
+  background: #a8d5f8;
+  width: 21px;
+  height: 114px;
+  border-radius: 0px 12px 12px 0px;
+}
+.quotation p {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.blog-right img {
+  position: absolute;
+  z-index: -1;
+  left: -83px;
+}
+.left img {
+  position: absolute;
+  top: -400px;
+  right: 0%;
+  z-index: -2;
+}
+.left {
+  position: relative;
+}
+.blog-round img {
+  position: absolute;
+  right: 0%;
+  top: -508px;
+}
+.blog-round {
+  position: relative;
+}
+.quotation {
+  width: 80%;
+  margin: 0px auto;
+}
+.quotation-wrapper .quote1 {
+  margin-left: 20px;
+}
+.quotation-wrapper .quote2 {
+  margin-right: 20px;
+}
+.quotation-wrapper::before {
+  content: "";
+  display: block;
+  background: #f3f4fb;
+  width: 7px;
+  height: 114px;
+  border-radius: 0px 12px 12px 0px;
+}
+/* QUOTE form css ends here */
+@media (max-width: 1440px) {
+  .blog-round img {
+    top: 0;
+  }
+  .blog-left img {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 1366px) {
+  .blog-date h3 {
+    right: 2%;
+  }
+}
+@media (max-width: 1280px) {
+  .blog-left img {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .blog-deatiled-img-wrapper::before {
+    width: 191px;
+    height: 91px;
+    right: 0%;
+  }
+  .admin-wrapper {
+    display: flex;
+    flex: 4;
+    align-items: center;
+  }
+  .blog-left img {
+    display: block;
+    bottom: -98px;
+    transform: scale(0.5);
+    right: -4%;
+  }
+}
+@media (max-width: 576px) {
+  .blog-admin-and-social {
+    flex-direction: column;
+  }
+  .admin-wrapper h5 {
+    border: none;
+  }
+  .social-media-wrapper {
+    margin: 0px;
+  }
+  .quote1 img {
+    display: none;
+  }
+
+  .quote1 {
+    align-self: baseline;
+  }
+
+  .quote1 span {
+    font-size: 63px;
+    font-weight: bold;
+    color: #2b6396;
+  }
+  .quote2 img {
+    display: none;
+  }
+
+  .quote2 {
+    align-self: self-end;
+  }
+
+  .quote2 span {
+    font-size: 63px;
+    font-weight: bold;
+    color: #2b6396;
+  }
+  .blog-title h3 {
+    color: #2d323d;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: 20px 0px;
+  }
+}
+
+@media (max-width: 414px) {
+  .social-media-wrapper h5 {
+    font-size: 15px;
+  }
+  .social-media-wrapper ul#social li a {
+    height: 40px;
+    width: 40px;
+    line-height: 2;
+    font-size: 17px;
+  }
+  .quote input {
+    margin: 0px 0px 20px;
+  }
+  .quote .form-group {
+    padding: 0px !important;
+  }
+}
+@media (max-width: 375px) {
+  .blog-date h3 {
+    bottom: 0px;
+  }
+}
