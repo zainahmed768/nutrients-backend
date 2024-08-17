@@ -309,8 +309,7 @@
                                 </a>
                             </li>
                             <li class="nav-item"><a href="{{ route('blog') }}" class="nav-links">Blogs</a></li>
-                            <!-- <li class="nav-item"><a href="shop.php" class="nav-links">Health & wellness</a></li> -->
-                            <!-- <li class="nav-item"><a href="shop.php" class="nav-links">Herbs & Natural Remedies</a></li> -->
+                       
                             <li class="nav-item"><a href="shop.php" class="nav-links">Special Offers</a></li>
                         </ul>
                     </div>
@@ -322,7 +321,7 @@
                                 <button href="#" class="search-trigger"><i class="fa fa-search"></i></button>
                             </li>
                             <li>
-                                <a href="signup.php"><i class="fa fa-user"></i></a>
+                                <a href="{{ route("user.login") }}"><i class="fa fa-user"></i></a>
                             </li>
                             <li>
                                 <a href="cart.php"><i class="fa fa-shopping-cart"></i>

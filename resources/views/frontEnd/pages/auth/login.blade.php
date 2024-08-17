@@ -57,8 +57,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="auth-btn text-right">
-                        <a href="javascript:void(0);" class="btn">Sign in</a>
-                        <a href="signup.php" class="btn light-btn">Sign up</a>
+                        <a href="{{ route('user.login') }}" class="btn">Sign in</a>
+                        <a href="{{ route('user.register') }}" class="btn light-btn">Sign up</a>
                     </div>
                     <div class="signup-form">
                         <h2 class="mb-4">Sign In</h2>

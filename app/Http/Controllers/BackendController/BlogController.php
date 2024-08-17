@@ -39,13 +39,23 @@ class BlogController extends Controller
      */
     public function store(BlogRequest $request)
     {
+        // Validate the request
         $validateBlog = $request->validated();
 
+        // Create a new Blog instance
         $blog = new Blog();
         $blog->title = $validateBlog['title'];
         $blog->content = $validateBlog['content'];
-        $blog->image = $validateBlog['image'];
         $blog->user_id = auth()->user()->id;
+
+        // Handle the image upload
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imagePath = $image->store('blog_images', 'public'); // Store the image in 'storage/app/public/blog_images'
+            $blog->image = $imagePath;
+        }
+
+        // Save the blog post
         $blog->save();
 
         return redirect()->route('blogs.index')->with('success', 'Blog created successfully');
