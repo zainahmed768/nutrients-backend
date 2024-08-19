@@ -27,8 +27,9 @@
                             <div class="blog_box">
                                 <div class="picture_box">
                                     <div class="img_box">
-                                        <figure><a href="{{ route('blog-detail', $blog->id) }}"><img src="img/blogs1.png"
-                                                    class="img-fluid"></a></figure>
+                                        <figure><a href="{{ route('blog-detail', $blog->id) }}"><img
+                                                    src="{{ asset('storage/' . $blog->image) }}" class="img-fluid"></a>
+                                        </figure>
                                     </div>
                                     <div class="hover_dv">
 

@@ -15,4 +15,10 @@ class Category extends Model
         'category_name',
         'description'
     ];
+
+    protected $guarded = [];
+    public function products()
+    {
+        $this->hasMany(Product::class);
+    }
 }

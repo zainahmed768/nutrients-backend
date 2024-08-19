@@ -35,8 +35,12 @@
                             @foreach ($blogs as $key => $blog)
                                 <tr>
                                     <td>{{ $blog->id }}</td>
-                                    <td><img src="{{ $blog->image }}" style="width: 50px;height: 50px;"
-                                            alt="{{ $blog->title }}"></td>
+                                    <td>
+                                        @if ($blog->image)
+                                            <img src="{{ asset('storage/' . $blog->image) }}"
+                                                style="width: 50px;height: 50px;" alt="{{ $blog->title }}">
+                                        @endif
+                                    </td>
                                     <td>{{ $blog->title }}</td>
                                     <td>{{ $blog->content }}</td>
                                     <td>{{ $blog->created_at }}</td>

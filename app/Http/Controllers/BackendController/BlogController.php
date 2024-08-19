@@ -41,20 +41,21 @@ class BlogController extends Controller
     {
         // Validate the request
         $validateBlog = $request->validated();
-
+        // dd($request->all());
         // Create a new Blog instance
         $blog = new Blog();
+
         $blog->title = $validateBlog['title'];
         $blog->content = $validateBlog['content'];
+        // $blog->image = $validateBlog['image'] ?? null;
         $blog->user_id = auth()->user()->id;
 
         // Handle the image upload
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imagePath = $image->store('blog_images', 'public'); // Store the image in 'storage/app/public/blog_images'
+            $imagePath = $image->store('blog_images', 'public');
             $blog->image = $imagePath;
         }
-
         // Save the blog post
         $blog->save();
 

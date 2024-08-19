@@ -11,7 +11,7 @@
             <div class="card-header d-flex justify-content-between py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Create Blogs</h6>
             </div>
-            <form action="{{ route('blogs.store') }}" method="POST" class="m-3">
+            <form action="{{ route('blogs.store') }}" method="POST" class="m-3" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="">Title</label>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Image</label>
-                    <input type="file" name="image"  class="form-control">
+                    <input type="file" name="image" class="form-control">
                     @error('image')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror

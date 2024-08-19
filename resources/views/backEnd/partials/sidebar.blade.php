@@ -32,6 +32,11 @@
                   <i class="fas fa-fw fa-tachometer-alt"></i>
                   <span>Categories</span></a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('product.index') }}">
+                  <i class="fas fa-fw fa-tachometer-alt"></i>
+                  <span>Products</span></a>
+          </li>
           <!-- Sidebar Toggler (Sidebar) -->
           <div class="text-center d-none d-md-inline">
               <button class="rounded-circle border-0" id="sidebarToggle"></button>

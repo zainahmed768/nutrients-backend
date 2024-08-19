@@ -3,6 +3,7 @@
 use App\Http\Controllers\BackendController\AdminController;
 use App\Http\Controllers\BackendController\BlogController;
 use App\Http\Controllers\BackendController\CategoryController;
+use App\Http\Controllers\BackendController\ProductController;
 use App\Http\Controllers\BackendController\UserController;
 use App\Http\Controllers\FrontendController\BlogController as FrontendControllerBlogController;
 use Illuminate\Support\Facades\Route;
@@ -44,4 +45,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
     Route::resource('/admin/blogs', BlogController::class);
     Route::resource('/admin/category', CategoryController::class);
+    Route::resource('/admin/product', ProductController::class);
 });
