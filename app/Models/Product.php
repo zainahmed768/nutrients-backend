@@ -9,12 +9,13 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = "id";
     protected $table = 'products';
 
     protected $guarded = [];
 
-    public function categorys()
+    public function category()
     {
-        return $this->belongsTo(Category::class, "id");
+        return $this->belongsTo(Category::class);
     }
 }

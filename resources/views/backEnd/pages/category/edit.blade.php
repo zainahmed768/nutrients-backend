@@ -4,12 +4,12 @@
     <div class="container-fluid">
     
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Blogs</h1>
+        <h1 class="h3 mb-2 text-gray-800">Category</h1>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header d-flex justify-content-between py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Edit Blogs</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Edit Category</h6>
             </div>
             <form action="{{ route('category.update', $category->id) }}" method="POST" class="m-3">
                 @method('PUT')

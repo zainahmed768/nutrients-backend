@@ -6,6 +6,7 @@ use App\Http\Controllers\BackendController\CategoryController;
 use App\Http\Controllers\BackendController\ProductController;
 use App\Http\Controllers\BackendController\UserController;
 use App\Http\Controllers\FrontendController\BlogController as FrontendControllerBlogController;
+use App\Http\Controllers\FrontendController\ProductController as FrontendControllerProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,3 +48,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::resource('/admin/category', CategoryController::class);
     Route::resource('/admin/product', ProductController::class);
 });
+
+Route::get('/shop', [FrontendControllerProductController::class, "index"])->name('shop');
+Route::get('/product/{id}', [FrontendControllerProductController::class, "show"])->name('product-detail');

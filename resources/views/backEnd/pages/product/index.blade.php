@@ -47,8 +47,8 @@
 
                                         <td>{{ $product->name }}</td>
                                         <td>{{ $product->description }}</td>
-                                        <td>{{ $product->price }}</td>
-                                        @dd($product)
+                                        <td>${{ $product->price }}</td>
+                                       
                                         <td>{{ $product->category->category_name ?? 'No Category' }}</td>
                                         <td>{{ $product->created_at }}</td>
                                         <td>

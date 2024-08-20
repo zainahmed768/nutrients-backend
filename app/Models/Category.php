@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-
+    protected $primaryKey = "id";
     protected $table = 'categorys';
 
     protected $fillable = [
@@ -19,6 +19,6 @@ class Category extends Model
     protected $guarded = [];
     public function products()
     {
-        $this->hasMany(Product::class);
+        $this->hasMany(Product::class, "category_id");
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackendController;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -17,12 +18,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with('categorys')->get();
-        dd($products);
-        if ($products->count() > 0) {
-            return view('backEnd.pages.product.index', compact('products'));
-        }
-        return view('backEnd.pages.product.index');
+        $products = Product::with('category')->get();
+        return view('backEnd.pages.product.index', compact('products'));
     }
 
     /**
@@ -44,13 +41,12 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        // dd($request->all());
         $validatedData = $request->validated();
         $product = new Product();
         $product->name = $validatedData['name'];
         $product->description = $validatedData['description'];
         $product->price = $validatedData['price'];
-        $product->category = $validatedData['category'];
+        $product->category_id = $validatedData['category'];
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -81,7 +77,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categories = Category::all();
+        $product = Product::findOrFail($id);
+        return view('backEnd.pages.product.edit', compact('product', 'categories'));
     }
 
     /**
@@ -91,9 +89,22 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $validateData = $request->validated();
+        $product->name = $validateData['name'];
+        $product->description = $validateData['description'];
+        $product->price = $validateData['price'];
+        $product->category_id = $validateData['category'];
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imagePath = $image->store('product_images', 'public');
+            $product->image = $imagePath;
+        }
+        $product->update();
+        return redirect()->route('product.index')->with('success', 'Product Updated successfully');
     }
 
     /**
@@ -104,6 +115,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->delete();
+        return redirect()->route('product.index')->with("success", "Product has been deleted");
     }
 }
