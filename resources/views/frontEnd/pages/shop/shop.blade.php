@@ -82,12 +82,12 @@
                                         Price: € 200
                                     </span>
                                     <!-- <span class="startPrice">
-                                                                                    $13 -
-                                                                                </span>
+                                                                                                $13 -
+                                                                                            </span>
 
-                                                                                <span class="endPrice">
-                                                                                    $335
-                                                                                </span> -->
+                                                                                            <span class="endPrice">
+                                                                                                $335
+                                                                                            </span> -->
                                 </div>
                             </div>
                         </div>
@@ -221,8 +221,9 @@
                                             <h6 class="price">$ {{ $product->price }}</h6>
                                         </div>
                                         <div class="cart-button-wrapper">
-                                            <a href="product-details.php" class="btn form-control"><i
-                                                    class="fa fa-shopping-cart"></i> Add To Cart</a>
+                                            <a href="{{ route('product-detail', $product->id) }}"
+                                                class="btn form-control"><i class="fa fa-shopping-cart"></i> Add To
+                                                Cart</a>
                                         </div>
                                     </div>
                                 </div>

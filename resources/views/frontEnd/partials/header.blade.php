@@ -62,11 +62,13 @@
                             <li>
                                 <a href="{{ route('user.login') }}"><i class="fa fa-user"></i></a>
                             </li>
-                            <li>
-                                <a href="cart.php"><i class="fa fa-shopping-cart"></i>
-                                    <span class="total-cart-no">1</span>
-                                </a>
-                            </li>
+                            @if (Auth::check())
+                                <li>
+                                    <a href="{{ route('cart.index') }}"><i class="fa fa-shopping-cart"></i>
+                                        <span class="total-cart-no">1</span>
+                                    </a>
+                                </li>
+                            @endif
                             @if (Auth::check())
                                 <li>
                                     <button type="submit"

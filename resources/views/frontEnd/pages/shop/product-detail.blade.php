@@ -121,14 +121,13 @@
                             </div>
                             <div class="number">
                                 <span class="plus">+</span>
-                                <input type="text" value="01">
+                                <input id="qty" type="text" value="01">
                                 <span class="minus">-</span>
                             </div>
                         </div>
                         <div class="button-wrapper">
-                            <button onclick="location.href='cart.php'" class="cart-btn form-control"><i
+                            <button id="add-btn" data-product-id="{{ $product->id }}" class="cart-btn form-control"><i
                                     class="fa fa-shopping-cart"></i> Add To Cart</button>
-                            <button class="wishlist-wrapper form-control">Add To wishlist</button>
                         </div>
                         <div class="other-spec-wrapper">
                             <ul>
@@ -552,4 +551,69 @@
         </div>
     </section>
     <!-- products-detail End here -->
+@endsection
+
+@section('scripts')
+    <script>
+        $('.minus').click(function() {
+            var $input = $(this).parent().find('input');
+            var count = parseInt($input.val()) - 1;
+            count = count < 1 ? 1 : count;
+            $input.val(count);
+            $input.change();
+            return false;
+        });
+        $('.plus').click(function() {
+            var $input = $(this).parent().find('input');
+            $input.val(parseInt($input.val()) + 1);
+            $input.change();
+            return false;
+        });
+
+        const cartBtn = document.getElementById('add-btn');
+        cartBtn.addEventListener("click", function() {
+            const productId = this.getAttribute('data-product-id');
+            const qty = document.getElementById('qty').value;
+            console.log("qty", productId, qty)
+
+            fetch("{{ route('add-to-cart') }}", {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json' // Add Accept header for JSON
+                    },
+                    body: JSON.stringify({
+                        product_id: productId,
+                        quantity: Number(qty)
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        Toastify({
+                            text: "Product added to cart",
+                            className: "info",
+                            close: true,
+                            style: {
+                                background: "#1aac7a",
+                            }
+                        }).showToast();
+                    } else {
+                        alert(data.error);
+                    }
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                    Toastify({
+                        text: "Error Please Try Again later",
+                        className: "error",
+                        close: true,
+                        style: {
+                            background: "#1aac7a",
+                        }
+                    }).showToast();
+                });
+        })
+    </script>
 @endsection

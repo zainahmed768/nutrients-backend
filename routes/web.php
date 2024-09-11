@@ -6,6 +6,7 @@ use App\Http\Controllers\BackendController\CategoryController;
 use App\Http\Controllers\BackendController\ProductController;
 use App\Http\Controllers\BackendController\UserController;
 use App\Http\Controllers\FrontendController\BlogController as FrontendControllerBlogController;
+use App\Http\Controllers\FrontendController\CartController;
 use App\Http\Controllers\FrontendController\ProductController as FrontendControllerProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,3 +52,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
 Route::get('/shop', [FrontendControllerProductController::class, "index"])->name('shop');
 Route::get('/product/{id}', [FrontendControllerProductController::class, "show"])->name('product-detail');
+Route::post("/add-to-cart", [CartController::class, "addToCart"])->name('add-to-cart');
+Route::get("/cart", [CartController::class, "viewCart"])->name('cart.index');

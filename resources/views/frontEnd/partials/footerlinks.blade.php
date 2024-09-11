@@ -1,6 +1,3 @@
-<!-- Jquery JS-->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
-<!-- Jquery JS -->
 <!-- Bootstrap Js -->
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <!-- Bootstrap Js -->
@@ -8,7 +5,9 @@
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!-- slick slider js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<!-- <script src="https://raw.githubusercontent.com/stevenwanderski/conditional-field/master/dist/conditional-field.min.js"></script> -->
+<!-- <script src="https://raw.githubusercontent.com/stevenwanderski/conditional-field/master/dist/conditional-field.min.js">
+</script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 <!-- Main Js -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
@@ -76,20 +75,20 @@
         }
 
         // product add and sub 
-        $('.minus').click(function() {
-            var $input = $(this).parent().find('input');
-            var count = parseInt($input.val()) - 1;
-            count = count < 1 ? 1 : count;
-            $input.val(count);
-            $input.change();
-            return false;
-        });
-        $('.plus').click(function() {
-            var $input = $(this).parent().find('input');
-            $input.val(parseInt($input.val()) + 1);
-            $input.change();
-            return false;
-        });
+        // $('.minus').click(function() {
+        //     var $input = $(this).parent().find('input');
+        //     var count = parseInt($input.val()) - 1;
+        //     count = count < 1 ? 1 : count;
+        //     $input.val(count);
+        //     $input.change();
+        //     return false;
+        // });
+        // $('.plus').click(function() {
+        //     var $input = $(this).parent().find('input');
+        //     $input.val(parseInt($input.val()) + 1);
+        //     $input.change();
+        //     return false;
+        // });
 
     });
 
