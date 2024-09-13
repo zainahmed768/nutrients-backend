@@ -48,7 +48,7 @@
                                         <td>{{ $product->name }}</td>
                                         <td>{{ $product->description }}</td>
                                         <td>${{ $product->price }}</td>
-                                       
+
                                         <td>{{ $product->category->category_name ?? 'No Category' }}</td>
                                         <td>{{ $product->created_at }}</td>
                                         <td>
@@ -73,6 +73,7 @@
                             @endif
                         </tbody>
                     </table>
+                    {{ $products->links() }}
                 </div>
             </div>
         </div>

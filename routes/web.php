@@ -54,3 +54,4 @@ Route::get('/shop', [FrontendControllerProductController::class, "index"])->name
 Route::get('/product/{id}', [FrontendControllerProductController::class, "show"])->name('product-detail');
 Route::post("/add-to-cart", [CartController::class, "addToCart"])->name('add-to-cart');
 Route::get("/cart", [CartController::class, "viewCart"])->name('cart.index');
+Route::get('/remove-product/{id}', [CartController::class, "removeFromCart"])->name('remove-product');

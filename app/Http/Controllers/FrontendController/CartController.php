@@ -43,13 +43,17 @@ class CartController extends Controller
         return response()->json(['success' => 'Product added to cart', 'cart' => $cart], 200);
     }
 
-    public function removeFromCart($productId)
+    public function removeFromCart(Request $request)
     {
+        $productId = $request->input('product_id');
         $cart = session()->get('cart', []);
+
         if (isset($cart[$productId])) {
+            dd($cart[$productId]);
             unset($cart[$productId]);
             session()->put('cart', $cart);
         }
+
         return response()->json(['success' => 'Product removed from cart', 'cart' => $cart], 200);
     }
 }

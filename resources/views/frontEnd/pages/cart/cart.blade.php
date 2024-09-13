@@ -39,11 +39,12 @@
                                 </thead>
                                 <tbody>
                                     {{-- @dd($cart) --}}
-                                    @foreach ($cart as $value)
+                                    @foreach ($cart as $key => $value)
                                         {{-- @dd($value) --}}
                                         <tr>
                                             <td class="close-row">
-                                                <button> <i class="fa fa-close"></i></button>
+                                                <button id="remove-product" data-product-id="{{ $key }}"> <i
+                                                        class="fa fa-close"></i></button>
                                             </td>
                                             <td class="pro-img">
                                                 <div class="img-wrapper">
@@ -110,4 +111,53 @@
         </div>
     </section>
     <!-- checkout-section ends here -->
+@endsection
+@section('scripts')
+    <script>
+        const removeProduct = document.querySelectorAll('#remove-product');
+        console.log(removeProduct, "removeProduct")
+        // removeProduct.addEventListener("click", function() {
+
+        removeProduct.forEach((button) => {
+            button.addEventListener('click', function() {
+                let productId = this.getAttribute('data-product-id');
+                console.log(productId, "productId")
+                fetch("{{ url('/remove-product') }}/" + productId, {
+                        method: 'GET',
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json' // Add Accept header for JSON
+                        },
+
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            Toastify({
+                                text: "Product is removed from the cart",
+                                className: "info",
+                                close: true,
+                                style: {
+                                    background: "#cb4949",
+                                }
+                            }).showToast();
+                        } else {
+                            alert(data.error);
+                        }
+                    })
+                    .catch(error => {
+                        console.log('Error:', error);
+                        Toastify({
+                            text: "Error Please Try Again later",
+                            className: "error",
+                            close: true,
+                            style: {
+                                background: "#1aac7a",
+                            }
+                        }).showToast();
+                    });
+            })
+        })
+    </script>
 @endsection
